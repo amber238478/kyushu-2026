@@ -75,3 +75,408 @@ a{color:inherit;text-decoration:none;}
 .dn-label{font-family:var(--gara);font-size:11px;letter-spacing:.4em;color:var(--light);text-transform:uppercase;}
 .dn-big{font-family:var(--gara);font-size:46px;line-height:1;color:var(--ink);letter-spacing:-.02em;}
 .d-title{font-family:var(--song);font-size:20px;font-weight:400;color:var(--ink);letter-spacing:.1em;}
+.d-title .r{color:var(--red);}
+.d-datetag{margin-left:auto;font-family:var(--gara);font-size:12px;color:var(--mid);letter-spacing:.2em;white-space:nowrap;}
+
+/* TIMELINE */
+.tl{display:flex;flex-direction:column;margin-bottom:28px;}
+.tl-row{display:grid;grid-template-columns:60px 18px 1fr;gap:0 14px;padding-bottom:14px;}
+.tl-t{font-family:var(--gara);font-size:12px;color:var(--mid);text-align:right;padding-top:3px;letter-spacing:.04em;}
+.tl-mid{display:flex;flex-direction:column;align-items:center;}
+.tl-dot{width:8px;height:8px;border-radius:50%;background:var(--rule);border:2px solid var(--mid);flex-shrink:0;margin-top:4px;}
+.tl-row:first-child .tl-dot{border-color:var(--red);background:var(--red);}
+.tl-line{flex:1;width:1px;background:var(--rule);margin-top:3px;}
+.tl-row:last-child .tl-line{background:transparent;}
+.tl-info{padding-top:2px;font-size:13.5px;color:var(--ink2);line-height:1.6;}
+.tl-info small{display:block;font-family:var(--gara);font-size:11.5px;color:var(--light);letter-spacing:.04em;margin-top:1px;}
+
+/* SPOT CARDS */
+.spots{display:grid;grid-template-columns:repeat(auto-fill,minmax(295px,1fr));gap:18px;margin-bottom:28px;}
+.sc{background:var(--white);border-radius:var(--r);overflow:hidden;border:1px solid var(--rule);box-shadow:var(--shadow);transition:transform .25s,box-shadow .25s;}
+.sc:hover{transform:translateY(-4px);box-shadow:var(--shadow-h);}
+.sc-body{padding:18px 20px 20px;}
+.sc-name{font-family:var(--song);font-size:15px;font-weight:700;color:var(--ink);letter-spacing:.06em;margin-bottom:6px;}
+.sc-desc{font-size:12.5px;color:var(--mid);line-height:1.8;margin-bottom:11px;}
+.sc-hls{display:flex;flex-direction:column;gap:4px;margin-bottom:11px;}
+.sc-hl{font-size:12.5px;color:var(--ink2);display:flex;gap:7px;}
+.sc-foot{display:flex;align-items:flex-start;justify-content:space-between;padding-top:9px;border-top:1px solid var(--rule);font-family:var(--gara);font-size:11.5px;color:var(--mid);gap:10px;}
+.sc-tip{font-style:italic;color:var(--gold);text-align:right;max-width:52%;}
+
+/* ACCOM BAR */
+.accom-bar{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px;padding:10px 14px;border:1px solid var(--rule);background:var(--white);border-radius:6px;margin-top:4px;}
+.ab-left{display:flex;align-items:center;gap:10px;}
+.ab-mark{width:3px;height:28px;background:var(--red);border-radius:2px;flex-shrink:0;}
+.ab-name{font-family:var(--song);font-size:13px;font-weight:700;color:var(--ink);letter-spacing:.05em;}
+.ab-sub{font-family:var(--gara);font-size:11px;color:var(--light);letter-spacing:.08em;}
+.ab-price{font-family:var(--gara);font-size:14px;color:var(--gold);white-space:nowrap;}
+
+/* ACCOMMODATION SECTION */
+#accommodation{background:var(--warm);}
+.accom-city{margin-bottom:48px;}
+.city-head{font-family:var(--song);font-size:16px;font-weight:700;color:var(--ink);letter-spacing:.1em;padding-bottom:11px;border-bottom:1px solid var(--rule);margin-bottom:18px;display:flex;align-items:center;gap:10px;}
+.city-tag{font-family:var(--gara);font-size:11px;letter-spacing:.22em;color:var(--mid);background:var(--white);border:1px solid var(--rule);padding:2px 10px;border-radius:100px;}
+.accom-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(270px,1fr));gap:16px;}
+.ac{background:var(--white);border-radius:var(--r);padding:20px;border:1px solid var(--rule);box-shadow:var(--shadow);position:relative;transition:transform .25s,box-shadow .25s;}
+.ac:hover{transform:translateY(-3px);box-shadow:var(--shadow-h);}
+.ac-badge{position:absolute;top:13px;right:13px;background:var(--red);color:#fff;font-family:var(--gara);font-size:10px;letter-spacing:.18em;text-transform:uppercase;padding:2px 9px;border-radius:100px;}
+.ac-stars{font-size:11px;color:#c8960a;letter-spacing:2px;margin-bottom:5px;}
+.ac-name{font-family:var(--song);font-size:14px;font-weight:700;color:var(--ink);letter-spacing:.05em;margin-bottom:3px;}
+.ac-type{font-family:var(--gara);font-size:12px;color:var(--mid);letter-spacing:.1em;margin-bottom:10px;}
+.ac-price{font-family:var(--gara);font-size:19px;color:var(--gold);margin-bottom:3px;}
+.ac-price span{font-size:11.5px;color:var(--mid);letter-spacing:.08em;}
+.ac-feats{display:flex;flex-wrap:wrap;gap:5px;margin:10px 0 14px;}
+.feat{background:var(--warm);border:1px solid var(--rule);color:var(--ink2);font-size:11.5px;padding:3px 9px;border-radius:100px;font-family:var(--gara);}
+.ac-btn{display:block;width:100%;padding:9px;background:var(--ink);color:#fff;text-align:center;border-radius:6px;font-family:var(--gara);font-size:11.5px;letter-spacing:.25em;text-transform:uppercase;transition:background .2s;cursor:pointer;border:none;}
+.ac-btn:hover{background:var(--red);}
+
+/* TIPS */
+#tips{background:var(--white);}
+.tips-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:16px;padding-bottom:80px;}
+.tip{background:var(--paper);border:1px solid var(--rule);border-radius:var(--r);padding:24px 22px;transition:transform .2s,box-shadow .2s;}
+.tip:hover{transform:translateY(-3px);box-shadow:var(--shadow);}
+.tip-icon{font-size:24px;margin-bottom:9px;display:block;}
+.tip-title{font-family:var(--song);font-size:13.5px;font-weight:700;color:var(--ink);letter-spacing:.05em;margin-bottom:7px;padding-left:9px;border-left:3px solid var(--red);}
+.tip-body{font-size:12.5px;color:var(--mid);line-height:1.9;}
+
+/* BUDGET */
+#budget{background:var(--ink);color:var(--paper);padding:72px 0;}
+.budget-inner{max-width:720px;margin:0 auto;padding:0 5%;}
+.budget-top{display:grid;grid-template-columns:1fr 1fr;gap:52px;align-items:start;margin-bottom:40px;}
+.budget-label{font-family:var(--gara);font-size:10px;letter-spacing:.5em;color:var(--light);text-transform:uppercase;margin-bottom:8px;}
+.budget-kanji{font-family:var(--song);font-weight:200;font-size:36px;line-height:1.2;letter-spacing:.1em;color:#f0e8d8;}
+.budget-note{font-family:var(--gara);font-style:italic;font-size:12.5px;color:var(--mid);line-height:1.7;padding-top:10px;border-top:1px solid #2a2018;}
+.blines{display:flex;flex-direction:column;}
+.bline{display:flex;justify-content:space-between;align-items:baseline;padding:12px 0;border-bottom:1px solid #2a2018;}
+.bline-cat{font-family:var(--song);font-size:13px;color:#c8bfae;}
+.bline-amt{font-family:var(--gara);font-size:16px;color:#f0ece3;}
+.btotal{display:flex;justify-content:space-between;align-items:baseline;padding:20px 0 0;margin-top:4px;}
+.bt-label{font-family:var(--gara);font-size:11px;letter-spacing:.4em;color:var(--light);text-transform:uppercase;}
+.bt-num{font-family:var(--gara);font-size:40px;color:#d4a020;letter-spacing:-.01em;line-height:1;}
+.bt-unit{font-size:13px;color:var(--mid);margin-left:5px;letter-spacing:.1em;}
+.parking-note{margin-top:36px;padding-top:20px;border-top:1px solid #2a2018;font-family:var(--gara);font-size:11.5px;color:var(--mid);letter-spacing:.12em;line-height:2;display:flex;flex-wrap:wrap;gap:4px 18px;}
+.parking-note strong{color:#c8bfae;}
+
+/* FOOTER */
+footer{background:var(--ink);border-top:3px solid var(--red);padding:32px 5%;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;}
+.ft-title{font-family:var(--song);font-weight:400;font-size:14px;letter-spacing:.15em;color:#f0e8d8;}
+.ft-date{font-family:var(--gara);font-size:13px;color:#5a4e3e;letter-spacing:.2em;}
+.ft-note{font-family:var(--gara);font-style:italic;font-size:12px;color:#3a3028;letter-spacing:.1em;}
+
+/* RWD */
+@media(max-width:760px){
+  .nav-links{display:none;flex-direction:column;position:absolute;top:54px;left:0;right:0;background:var(--paper);border-bottom:1px solid var(--rule);padding:6px 0;}
+  .nav-links.open{display:flex;}
+  .nav-links a{line-height:1;padding:13px 5%;}
+  .nav-toggle{display:flex;}
+  .d-datetag{margin-left:0;}
+  .spots,.accom-grid,.tips-grid{grid-template-columns:1fr;}
+  .budget-top{grid-template-columns:1fr;gap:28px;}
+  footer{flex-direction:column;text-align:center;}
+}
+</style>
+</head>
+<body>
+
+<nav id="navbar">
+  <div class="nav-brand">熊本<span class="r">銀杏</span>之旅 2026</div>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="#route">路線圖</a></li>
+    <li><a href="#days">每日行程</a></li>
+    <li><a href="#accommodation">住宿</a></li>
+    <li><a href="#tips">旅遊提醒</a></li>
+    <li><a href="#budget">預算</a></li>
+  </ul>
+  <div class="nav-toggle" onclick="document.getElementById('navLinks').classList.toggle('open')">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
+
+<section id="hero">
+  <div class="hero-deco"></div>
+  <div class="hero-body">
+    <div class="hero-tag"><span class="hero-tag-line"></span><span class="hero-tag-text">Kumamoto · Autumn Self-Drive · 2026</span></div>
+    <h1 class="hero-title">熊本<span class="g">銀杏</span>之旅</h1>
+    <p class="hero-sub">Eight days through autumn Kyushu — onsen, ginkgo gold &amp; scenic drives</p>
+    <div class="hero-chips">
+      <span class="chip">✈ CI194 · 11/05 出發</span>
+      <span class="chip">8 天 7 夜</span>
+      <span class="chip">2 人自駕</span>
+      <span class="chip">🚗 SUV 11/06–11/10</span>
+      <span class="chip">🍂 秋季限定</span>
+    </div>
+  </div>
+  <div class="hero-scroll"><span class="scroll-txt">Scroll</span><div class="scroll-bar"></div></div>
+</section>
+
+<section id="route">
+  <div class="wrap">
+    <div class="sec-head"><span class="eyebrow">Route Overview</span><h2 class="sec-title">行程路線圖</h2><div class="sec-rule"></div></div>
+    <div id="map"></div>
+    <div id="map-legend"></div>
+  </div>
+</section>
+
+<section id="days">
+  <div class="wrap">
+    <div class="sec-head"><span class="eyebrow">Day by Day</span><h2 class="sec-title">每日行程</h2><div class="sec-rule"></div></div>
+
+    <!-- D1 -->
+    <div class="day-block">
+      <div class="day-head"><span class="dn-label">Day</span><span class="dn-big">01</span><span class="d-title">抵達<span class="r">熊本</span>車站</span><span class="d-datetag">NOV 05 · THU</span></div>
+      <div class="tl">
+        <div class="tl-row"><span class="tl-t">14:30</span><div class="tl-mid"><div class="tl-dot"></div><div class="tl-line"></div></div><div class="tl-info">CI194 桃園機場起飛<small>飛行時間約 3 小時</small></div></div>
+        <div class="tl-row"><span class="tl-t">17:30</span><div class="tl-mid"><div class="tl-dot"></div><div class="tl-line"></div></div><div class="tl-info">熊本機場落地</div></div>
+        <div class="tl-row"><span class="tl-t">18:15</span><div class="tl-mid"><div class="tl-dot"></div><div class="tl-line"></div></div><div class="tl-info">機場巴士出發<small>→ 熊本車站 19:10 抵達</small></div></div>
+        <div class="tl-row"><span class="tl-t">晚餐</span><div class="tl-mid"><div class="tl-dot"></div><div class="tl-line"></div></div><div class="tl-info">車站 AMU Plaza 自由選<small>熊本拉麵、馬肉料理</small></div></div>
+      </div>
+      <div class="accom-bar"><div class="ab-left"><div class="ab-mark"></div><div><div class="ab-name">東橫 INN 熊本站前</div><div class="ab-sub">車站步行 · 含早餐</div></div></div><span class="ab-price">¥11,705 / 2人</span></div>
+    </div>
+
+    <!-- D2 -->
+    <div class="day-block">
+      <div class="day-head"><span class="dn-label">Day</span><span class="dn-big">02</span><span class="d-title"><span class="r">高千穗峽</span>晨衝 · 南阿蘇名水</span><span class="d-datetag">NOV 06 · FRI</span></div>
+      <div class="tl">
+        <div class="tl-row"><span class="tl-t">09:30</span><div class="tl-mid"><div class="tl-dot"></div><div class="tl-line"></div></div><div class="tl-info">熊本站前店取車出發（SUV）<small>通勤約 2.5 小時</small></div></div>
+        <div class="tl-row"><span class="tl-t">11:00</span><div class="tl-mid"><div class="tl-dot"></div><div class="tl-line"></div></div><div class="tl-info">高千穗峽 划船 / 步道散策<small>停留約 1.2h · 划船預約 10/07 開放 · 停車 ¥1,000</small></div></div>
+        <div class="tl-row"><span class="tl-t">13:30</span><div class="tl-mid"><div class="tl-dot"></div><div class="tl-line"></div></div><div class="tl-info">上色見熊野座神社<small>苔石階梯 · 停留 40 分</small></div></div>
+        <div class="tl-row"><span class="tl-t">14:40</span><div class="tl-mid"><div class="tl-dot"></div><div class="tl-line"></div></div><div class="tl-info">白川水源<small>日本名水百選 · 停留 20 分</small></div></div>
+        <div class="tl-row"><span class="tl-t">16:00</span><div class="tl-mid"><div class="tl-dot"></div><div class="tl-line"></div></div><div class="tl-info">抵達阿蘇溫泉飯店 · 入住</div></div>
+      </div>
+      <div class="spots">
+        <div class="sc"><div class="sc-body"><div class="sc-name">高千穗峽</div><div class="sc-desc">五瀨川切割的 V 字型峽谷，峽谷兩岸綠意盎然，划船可穿越真名井瀑布下方，景色壯觀。</div><div class="sc-hls"><div class="sc-hl"><span>🚣</span><span>手划小船穿越 17m 瀑布</span></div><div class="sc-hl"><span>🌿</span><span>峽谷步道散策</span></div><div class="sc-hl"><span>📸</span><span>真名井瀑布最佳攝影角度</span></div><div class="sc-hl"><span>⏰</span><span>划船需事先預約（10/07 開放）</span></div></div><div class="sc-foot"><span>⏱ 建議停留 1–1.5 小時</span><span class="sc-tip">早上 9 點前到，人少光線最美</span></div></div></div>
+        <div class="sc"><div class="sc-body"><div class="sc-name">白川水源</div><div class="sc-desc">每分鐘湧出 60 噸的超清澈湧泉，水溫常年 14°C，日本名水百選，周邊綠意環繞。</div><div class="sc-hls"><div class="sc-hl"><span>💧</span><span>日本名水百選認定</span></div><div class="sc-hl"><span>🌡️</span><span>水溫常年 14°C，清澈見底</span></div><div class="sc-hl"><span>🌳</span><span>自然景觀清幽</span></div><div class="sc-hl"><span>🥛</span><span>現場可購買名水豆腐</span></div></div><div class="sc-foot"><span>⏱ 建議停留 20–30 分</span><span class="sc-tip">可買袋裝名水帶走</span></div></div></div>
+      </div>
+      <div class="accom-bar"><div class="ab-left"><div class="ab-mark"></div><div><div class="ab-name">Minshuku Asogen（阿蘇源）</div><div class="ab-sub">一泊二食 · 2晚連住</div></div></div><span class="ab-price">¥72,344 / 2人2晚</span></div>
+    </div>
+
+    <!-- D3 -->
+    <div class="day-block">
+      <div class="day-head"><span class="dn-label">Day</span><span class="dn-big">03</span><span class="d-title">阿蘇<span class="r">火口</span>芒草海 · 大觀峰</span><span class="d-datetag">NOV 07 · SAT</span></div>
+      <div class="tl">
+        <div class="tl-row"><span class="tl-t">09:30</span><div class="tl-mid"><div class="tl-dot"></div><div class="tl-line"></div></div><div class="tl-info">阿蘇火口 · 草千里<small>金黃芒草絕景季 · 停留 30 分 · 停車 ¥500</small></div></div>
+        <div class="tl-row"><span class="tl-t">12:30</span><div class="tl-mid"><div class="tl-dot"></div><div class="tl-line"></div></div><div class="tl-info">大觀峰<small>360 度環景台地 · 停留 45 分</small></div></div>
+        <div class="tl-row"><span class="tl-t">15:30</span><div class="tl-mid"><div class="tl-dot"></div><div class="tl-line"></div></div><div class="tl-info">返回飯店 · 享用溫泉 &amp; 晚餐</div></div>
+      </div>
+      <div class="spots">
+        <div class="sc"><div class="sc-body"><div class="sc-name">阿蘇中岳火口 · 草千里</div><div class="sc-desc">世界最大規模破火山口，秋季芒草金黃如海浪，火口煙霧繚繞，形成超現實景觀。草千里可騎馬體驗。</div><div class="sc-hls"><div class="sc-hl"><span>🌋</span><span>世界最大破火山口群</span></div><div class="sc-hl"><span>🌾</span><span>秋季金黃芒草原壯觀</span></div><div class="sc-hl"><span>🐴</span><span>草千里騎馬體驗</span></div><div class="sc-hl"><span>⚠️</span><span>火口開放視當日活動狀況</span></div></div><div class="sc-foot"><span>⏱ 建議停留 1–1.5 小時</span><span class="sc-tip">出發前確認阿蘇火口開放</span></div></div></div>
+        <div class="sc"><div class="sc-body"><div class="sc-name">大觀峰</div><div class="sc-desc">海拔 936m 展望台，能一覽阿蘇外輪山全貌與稻田拼布。秋季晨霧如仙境，日出攝影聖地。</div><div class="sc-hls"><div class="sc-hl"><span>🏔️</span><span>360 度無遮蔽全景台</span></div><div class="sc-hl"><span>🌅</span><span>日出雲海攝影聖地</span></div><div class="sc-hl"><span>🌾</span><span>秋季金黃稻田全景同框</span></div><div class="sc-hl"><span>☕</span><span>山頂有咖啡小屋</span></div></div><div class="sc-foot"><span>⏱ 建議停留 30–45 分</span><span class="sc-tip">日出前到可拍到雲海</span></div></div></div>
+      </div>
+      <div class="accom-bar"><div class="ab-left"><div class="ab-mark"></div><div><div class="ab-name">Minshuku Asogen（連住）</div><div class="ab-sub">免搬行李 · 含早晚餐</div></div></div></div>
+    </div>
+
+    <!-- D4 -->
+    <div class="day-block">
+      <div class="day-head"><span class="dn-label">Day</span><span class="dn-big">04</span><span class="d-title"><span class="r">牧之戶峠</span> · 九重吊橋 · 黑川溫泉</span><span class="d-datetag">NOV 08 · SUN</span></div>
+      <div class="tl">
+        <div class="tl-row"><span class="tl-t">10:00</span><div class="tl-mid"><div class="tl-dot"></div><div class="tl-line"></div></div><div class="tl-info">牧之戶峠<small>高山展望台 · 停留 50 分</small></div></div>
+        <div class="tl-row"><span class="tl-t">11:40</span><div class="tl-mid"><div class="tl-dot"></div><div class="tl-line"></div></div><div class="tl-info">九重夢大吊橋<small>九州第一高橋 · 停留 20 分</small></div></div>
+        <div class="tl-row"><span class="tl-t">14:30</span><div class="tl-mid"><div class="tl-dot"></div><div class="tl-line"></div></div><div class="tl-info">黑川溫泉入住 · 散策溫泉街<small>享用懷石晚餐</small></div></div>
+      </div>
+      <div class="spots">
+        <div class="sc"><div class="sc-body"><div class="sc-name">牧之戶峠</div><div class="sc-desc">九重連山展望台，海拔 1330m，視野遼闊，天晴可見由布岳，是九州數一數二的山岳景觀。</div><div class="sc-hls"><div class="sc-hl"><span>🏔️</span><span>九重連山全景展望</span></div><div class="sc-hl"><span>🌤️</span><span>晴天可見由布岳</span></div><div class="sc-hl"><span>🚶</span><span>附近有短程健行步道</span></div><div class="sc-hl"><span>🧥</span><span>早晚氣溫低，必備厚外套</span></div></div><div class="sc-foot"><span>⏱ 建議停留 40–60 分</span><span class="sc-tip">晴天視野極佳</span></div></div></div>
+      </div>
+      <div class="accom-bar"><div class="ab-left"><div class="ab-mark" style="background:var(--gold)"></div><div><div class="ab-name">Ryokan Yunosako</div><div class="ab-sub">一泊二食 · 懷石料理</div></div></div><span class="ab-price">¥34,896 / 2人</span></div>
+    </div>
+
+    <!-- D5 -->
+    <div class="day-block">
+      <div class="day-head"><span class="dn-label">Day</span><span class="dn-big">05</span><span class="d-title">動物探險 Safari → <span class="r">別府</span>地獄</span><span class="d-datetag">NOV 09 · MON</span></div>
+      <div class="tl">
+        <div class="tl-row"><span class="tl-t">10:00</span><div class="tl-mid"><div class="tl-dot"></div><div class="tl-line"></div></div><div class="tl-info">九州自然動物園<small>推薦自駕入園巡遊 · 停留 1.6h · 停車免費</small></div></div>
+        <div class="tl-row"><span class="tl-t">15:00</span><div class="tl-mid"><div class="tl-dot"></div><div class="tl-line"></div></div><div class="tl-info">海地獄<small>鈷藍色溫泉奇景 · 停留 30 分 · 或體驗別府砂浴</small></div></div>
+        <div class="tl-row"><span class="tl-t">17:00</span><div class="tl-mid"><div class="tl-dot"></div><div class="tl-line"></div></div><div class="tl-info">鐵輪溫泉飯店入住<small>晚餐建議海鮮居酒屋，換換口味</small></div></div>
+      </div>
+      <div class="spots">
+        <div class="sc"><div class="sc-body"><div class="sc-name">九州自然動物園</div><div class="sc-desc">日本少數可自駕進入的 Safari 公園，近距離觀察獅子、長頸鹿，全程無需下車，安全刺激。</div><div class="sc-hls"><div class="sc-hl"><span>🦁</span><span>自駕 Safari 路線全長 5km</span></div><div class="sc-hl"><span>🦒</span><span>長頸鹿可從車窗餵食</span></div><div class="sc-hl"><span>🚗</span><span>停車免費</span></div><div class="sc-hl"><span>🎟️</span><span>門票 ¥2,600 / 人</span></div></div><div class="sc-foot"><span>⏱ 建議停留 1.5–2 小時</span><span class="sc-tip">平日人少體驗更好</span></div></div></div>
+        <div class="sc"><div class="sc-body"><div class="sc-name">海地獄 · 別府地獄巡</div><div class="sc-desc">鈷藍色硫酸鐵溫泉，溫度高達 98°C。別府七地獄之首，視覺衝擊極強，停車免費。</div><div class="sc-hls"><div class="sc-hl"><span>🔵</span><span>鈷藍色泉水溫度 98°C</span></div><div class="sc-hl"><span>♨️</span><span>共通券可遊覽多個地獄</span></div><div class="sc-hl"><span>🥚</span><span>地獄蒸蛋必嚐</span></div><div class="sc-hl"><span>🅿️</span><span>停車免費</span></div></div><div class="sc-foot"><span>⏱ 建議停留 30–45 分</span><span class="sc-tip">買共通券多逛幾個地獄</span></div></div></div>
+      </div>
+      <div class="accom-bar"><div class="ab-left"><div class="ab-mark" style="background:var(--ink)"></div><div><div class="ab-name">日本旅館 器 別府鉄輪</div><div class="ab-sub">不含早餐 · 鐵輪溫泉</div></div></div><span class="ab-price">¥21,624 / 2人</span></div>
+    </div>
+
+    <!-- D6 -->
+    <div class="day-block">
+      <div class="day-head"><span class="dn-label">Day</span><span class="dn-big">06</span><span class="d-title">狹霧台 · <span class="r">由布院</span>漫遊 → 返熊本</span><span class="d-datetag">NOV 10 · TUE</span></div>
+      <div class="tl">
+        <div class="tl-row"><span class="tl-t">09:30</span><div class="tl-mid"><div class="tl-dot"></div><div class="tl-line"></div></div><div class="tl-info">狹霧台 / 由布岳 拍照<small>晨霧雲海攝影絕點 · 停留 1 小時</small></div></div>
+        <div class="tl-row"><span class="tl-t">10:30</span><div class="tl-mid"><div class="tl-dot"></div><div class="tl-line"></div></div><div class="tl-info">由布院慢遊<small>金鱗湖 · 湯之坪街道 · 約 5 小時 · 停車 ¥500–800</small></div></div>
+        <div class="tl-row"><span class="tl-t">15:30</span><div class="tl-mid"><div class="tl-dot"></div><div class="tl-line"></div></div><div class="tl-info">由布院 IC 上高速</div></div>
+        <div class="tl-row"><span class="tl-t">17:30</span><div class="tl-mid"><div class="tl-dot"></div><div class="tl-line"></div></div><div class="tl-info">熊本站前店還車<small>今日通勤最長，建議輪流駕駛</small></div></div>
+      </div>
+      <div class="spots">
+        <div class="sc"><div class="sc-body"><div class="sc-name">由布院 金鱗湖 · 湯之坪街道</div><div class="sc-desc">由布岳倒映湖中，秋日晨霧升騰，湖畔咖啡館與工藝小店連綿，九州最浪漫的散步小鎮。</div><div class="sc-hls"><div class="sc-hl"><span>🌊</span><span>金鱗湖晨霧如夢似幻</span></div><div class="sc-hl"><span>🛍️</span><span>湯之坪街道精品伴手禮</span></div><div class="sc-hl"><span>🍰</span><span>B-speak 名物 P 捲蛋糕必買</span></div><div class="sc-hl"><span>☕</span><span>湖畔咖啡館景觀一流</span></div></div><div class="sc-foot"><span>⏱ 建議停留 4–5 小時</span><span class="sc-tip">採買戰利品放後座，回熊本再大購物</span></div></div></div>
+      </div>
+      <div class="accom-bar"><div class="ab-left"><div class="ab-mark"></div><div><div class="ab-name">Dormy Inn 熊本</div><div class="ab-sub">天然溫泉 · 含晚間拉麵 · 含早 · 2晚連住</div></div></div><span class="ab-price">¥30,609 / 2人2晚</span></div>
+    </div>
+
+    <!-- D7 -->
+    <div class="day-block">
+      <div class="day-head"><span class="dn-label">Day</span><span class="dn-big">07</span><span class="d-title"><span class="r">熊本城</span>銀杏祭 · 上下通大採買</span><span class="d-datetag">NOV 11 · WED</span></div>
+      <div class="tl">
+        <div class="tl-row"><span class="tl-t">上午</span><div class="tl-mid"><div class="tl-dot"></div><div class="tl-line"></div></div><div class="tl-info">熊本城 銀杏祭<small>銀杏金黃地毯 · 停車 ¥200/h</small></div></div>
+        <div class="tl-row"><span class="tl-t">下午</span><div class="tl-mid"><div class="tl-dot"></div><div class="tl-line"></div></div><div class="tl-info">上下通商圈大採買<small>藥妝 · 電器 · 伴手禮</small></div></div>
+        <div class="tl-row"><span class="tl-t">晚上</span><div class="tl-mid"><div class="tl-dot"></div><div class="tl-line"></div></div><div class="tl-info">Dormy Inn 天然溫泉<small>行程最後一晚，好好泡湯放鬆</small></div></div>
+      </div>
+      <div class="spots">
+        <div class="sc"><div class="sc-body"><div class="sc-name">熊本城 銀杏祭</div><div class="sc-desc">11 月中旬城堡周邊銀杏鋪成金黃地毯，與熊本城黑瓦白牆形成強烈對比，極具美感。</div><div class="sc-hls"><div class="sc-hl"><span>🏯</span><span>日本三大名城之一</span></div><div class="sc-hl"><span>🌿</span><span>11 月中銀杏最盛</span></div><div class="sc-hl"><span>📸</span><span>宇土櫓前最佳拍照角度</span></div><div class="sc-hl"><span>🛍️</span><span>くまモン限定商品</span></div></div><div class="sc-foot"><span>⏱ 建議停留 1.5–2 小時</span><span class="sc-tip">早上光線最佳</span></div></div></div>
+      </div>
+      <div class="accom-bar"><div class="ab-left"><div class="ab-mark"></div><div><div class="ab-name">Dormy Inn 熊本（連住）</div><div class="ab-sub">含早餐 · 天然溫泉</div></div></div></div>
+    </div>
+
+    <!-- D8 -->
+    <div class="day-block">
+      <div class="day-head"><span class="dn-label">Day</span><span class="dn-big">08</span><span class="d-title">櫻町補貨 · 帶著<span class="r">秋意</span>賦歸</span><span class="d-datetag">NOV 12 · THU</span></div>
+      <div class="tl">
+        <div class="tl-row"><span class="tl-t">10:00</span><div class="tl-mid"><div class="tl-dot"></div><div class="tl-line"></div></div><div class="tl-info">櫻町商場最後補貨</div></div>
+        <div class="tl-row"><span class="tl-t">15:00</span><div class="tl-mid"><div class="tl-dot"></div><div class="tl-line"></div></div><div class="tl-info">飯店對面搭巴士往機場</div></div>
+        <div class="tl-row"><span class="tl-t">18:30</span><div class="tl-mid"><div class="tl-dot"></div><div class="tl-line"></div></div><div class="tl-info">CI195 起飛<small>抵達桃園 20:05</small></div></div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section id="accommodation">
+  <div class="wrap">
+    <div class="sec-head"><span class="eyebrow">Where to Stay</span><h2 class="sec-title">住宿一覽</h2><div class="sec-rule"></div></div>
+
+    <div class="accom-city">
+      <div class="city-head">熊本 <span class="city-tag">Day 1</span></div>
+      <div class="accom-grid">
+        <div class="ac"><div class="ac-stars">★★★</div><div class="ac-name">東橫 INN 熊本站前</div><div class="ac-type">商務飯店</div><div class="ac-price">¥11,705 <span>/ 2人</span></div><div class="ac-feats"><span class="feat">🚉 車站步行</span><span class="feat">🥐 早餐免費</span></div><button class="ac-btn" onclick="window.open('https://www.toyoko-inn.com/search/detail/00238','_blank')">查看訂房</button></div>
+      </div>
+    </div>
+
+    <div class="accom-city">
+      <div class="city-head">南阿蘇 <span class="city-tag">Day 2–3</span></div>
+      <div class="accom-grid">
+        <div class="ac"><div class="ac-badge">已選定</div><div class="ac-stars">★★★★</div><div class="ac-name">Minshuku Asogen（阿蘇源）</div><div class="ac-type">民宿 · 一泊二食</div><div class="ac-price">¥72,344 <span>/ 2人2晚（含早晚餐）</span></div><div class="ac-feats"><span class="feat">♨️ 溫泉</span><span class="feat">🍱 含早晚餐</span><span class="feat">🏔️ 阿蘇景觀</span><span class="feat">🧳 免搬行李</span></div><button class="ac-btn" onclick="window.open('https://www.booking.com/searchresults.html?ss=Minshuku+Asogen','_blank')">查看訂房</button></div>
+      </div>
+    </div>
+
+    <div class="accom-city">
+      <div class="city-head">黑川溫泉 <span class="city-tag">Day 4</span></div>
+      <div class="accom-grid">
+        <div class="ac"><div class="ac-badge">已選定</div><div class="ac-stars">★★★★★</div><div class="ac-name">Ryokan Yunosako</div><div class="ac-type">旅館 · 一泊二食</div><div class="ac-price">¥34,896 <span>/ 2人（含早晚餐）</span></div><div class="ac-feats"><span class="feat">♨️ 露天溫泉</span><span class="feat">🎋 懷石料理</span><span class="feat">🌙 私人湯屋</span></div><button class="ac-btn" onclick="window.open('https://www.booking.com/searchresults.html?ss=Kurokawa+Onsen+Yunosako','_blank')">查看訂房</button></div>
+      </div>
+    </div>
+
+    <div class="accom-city">
+      <div class="city-head">別府鐵輪 <span class="city-tag">Day 5</span></div>
+      <div class="accom-grid">
+        <div class="ac"><div class="ac-badge">已選定</div><div class="ac-stars">★★★★</div><div class="ac-name">日本旅館 器 別府鉄輪</div><div class="ac-type">旅館 · 不含早餐</div><div class="ac-price">¥21,624 <span>/ 2人</span></div><div class="ac-feats"><span class="feat">♨️ 鐵輪溫泉</span><span class="feat">🏮 日式風情</span><span class="feat">🌆 地獄蒸料理</span></div><button class="ac-btn" onclick="window.open('https://www.booking.com/searchresults.html?ss=Beppu+Kannawa+Utsuwa','_blank')">查看訂房</button></div>
+      </div>
+    </div>
+
+    <div class="accom-city" style="padding-bottom:80px">
+      <div class="city-head">熊本市中心 <span class="city-tag">Day 6–7</span></div>
+      <div class="accom-grid">
+        <div class="ac"><div class="ac-badge">已選定</div><div class="ac-stars">★★★★</div><div class="ac-name">Dormy Inn 熊本</div><div class="ac-type">商務飯店 · 天然溫泉</div><div class="ac-price">¥30,609 <span>/ 2人2晚（含早餐）</span></div><div class="ac-feats"><span class="feat">♨️ 天然溫泉</span><span class="feat">🍜 夜鳴きラーメン</span><span class="feat">🍳 含早餐</span><span class="feat">🏙️ 市中心</span></div><button class="ac-btn" onclick="window.open('https://www.hotespa.net/hotels/kumamoto/','_blank')">查看訂房</button></div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section id="tips">
+  <div class="wrap">
+    <div class="sec-head"><span class="eyebrow">Travel Notes</span><h2 class="sec-title">旅遊提醒</h2><div class="sec-rule"></div></div>
+    <div class="tips-grid">
+      <div class="tip"><span class="tip-icon">🧳</span><div class="tip-title">行李策略</div><p class="tip-body">SUV 後箱放 2 個 28 吋剛好，空間有限。由布院採買的戰利品建議放後座，待回熊本還車後再展開大採買，避免壓壞。</p></div>
+      <div class="tip"><span class="tip-icon">🚗</span><div class="tip-title">輪流駕駛</div><p class="tip-body">Day 6（週二）返熊本高速段筆直好開，建議每 1.5 小時輪換一次，分擔體力、共享秋日車窗風景。</p></div>
+      <div class="tip"><span class="tip-icon">🍽️</span><div class="tip-title">飲食防膩</div><p class="tip-body">別府與熊本的晚餐建議安排海鮮居酒屋或在地小吃，與溫泉旅館的懷石料理做區隔，避免精緻料理疲勞。</p></div>
+      <div class="tip"><span class="tip-icon">🌡️</span><div class="tip-title">穿衣建議</div><p class="tip-body">11 月九州日夜溫差大，白天 15–20°C，阿蘇 / 九重山區早晚僅 5–8°C。牧之戶峠等高海拔景點務必備厚外套。</p></div>
+      <div class="tip"><span class="tip-icon">🌋</span><div class="tip-title">阿蘇火口確認</div><p class="tip-body">阿蘇中岳火口開放視當日火山活動而定。出發前確認阿蘇火山博物館官網，備好草千里替代方案。</p></div>
+      <div class="tip"><span class="tip-icon">🚣</span><div class="tip-title">高千穗划船預約</div><p class="tip-body">高千穗峽划船需事先預約，2026 年預約預計 10/07 開放。旺季 11 月幾乎秒殺，請準時上線搶訂。</p></div>
+      <div class="tip"><span class="tip-icon">🅿️</span><div class="tip-title">停車費明細</div><p class="tip-body">高千穗 ¥1,000 ／ 阿蘇 ¥500 ／ 由布院 ¥500–800 ／ 熊本城 ¥200/h。九州自然動物園與海地獄停車免費。</p></div>
+      <div class="tip"><span class="tip-icon">📱</span><div class="tip-title">必備 App</div><p class="tip-body">Google Maps（離線下載九州地圖）、Yahoo! カーナビ（日本導航最準）、じゃらん（飯店評價）、Google 翻譯相機功能。</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="budget">
+  <div class="budget-inner">
+    <div class="sec-head" style="padding-top:0"><span class="eyebrow" style="color:var(--light)">Budget Breakdown</span><h2 class="sec-title" style="color:#f0e8d8">預算明細</h2><div class="sec-rule"></div></div>
+    <div class="budget-top">
+      <div>
+        <div class="budget-label">2人行費用預估</div>
+        <div class="budget-kanji">予算<br>明細</div>
+        <p class="budget-note">單位：日圓（JPY）<br>約 NT$1 ≈ ¥4.8</p>
+      </div>
+      <div class="blines">
+        <div class="bline"><span class="bline-cat">住宿（含精緻料理）</span><span class="bline-amt">¥171,178</span></div>
+        <div class="bline"><span class="bline-cat">租車 + 全險</span><span class="bline-amt">¥56,000</span></div>
+        <div class="bline"><span class="bline-cat">油資 + 過路費</span><span class="bline-amt">¥14,000</span></div>
+        <div class="bline"><span class="bline-cat">動物園門票</span><span class="bline-amt">¥5,200</span></div>
+        <div class="bline"><span class="bline-cat">划船門票（預估）</span><span class="bline-amt">¥3,000</span></div>
+        <div class="bline"><span class="bline-cat">地獄巡門票</span><span class="bline-amt">¥800</span></div>
+        <div class="bline"><span class="bline-cat">停車費預估</span><span class="bline-amt">¥4,000</span></div>
+        <div class="btotal"><span class="bt-label">Total</span><span><span class="bt-num">¥254,178</span><span class="bt-unit">JPY</span></span></div>
+      </div>
+    </div>
+    <div class="parking-note">
+      <span><strong>高千穗</strong> ¥1,000</span>
+      <span><strong>阿蘇</strong> ¥500</span>
+      <span><strong>由布院</strong> ¥500–800</span>
+      <span><strong>熊本城</strong> ¥200/h</span>
+      <span>✓ 動物園・海地獄 免費停車</span>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <span class="ft-title">熊本銀杏之旅</span>
+  <span class="ft-date">NOV 05 – 12 · 2026</span>
+  <span class="ft-note">旅途愉快 · 銀杏常在心間</span>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
+<script>
+window.addEventListener('scroll',()=>{
+  document.getElementById('navbar').classList.toggle('scrolled',window.scrollY>10);
+});
+
+const obs=new IntersectionObserver(entries=>{
+  entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('vis');obs.unobserve(e.target);}});
+},{threshold:.07});
+document.querySelectorAll('.day-block').forEach((el,i)=>{
+  el.style.transitionDelay=(i*.06)+'s';obs.observe(el);
+});
+
+const days=[
+  {label:'Day 1',name:'熊本',         lat:32.8031,lng:130.7079},
+  {label:'Day 2',name:'高千穗峽',      lat:32.7061,lng:131.2919},
+  {label:'Day 2',name:'南阿蘇',        lat:32.8200,lng:131.0000},
+  {label:'Day 3',name:'阿蘇火口',      lat:32.8837,lng:131.0869},
+  {label:'Day 4',name:'牧之戶・黑川',  lat:33.0580,lng:131.1720},
+  {label:'Day 5',name:'大分・別府',    lat:33.2817,lng:131.4913},
+  {label:'Day 6',name:'由布院',        lat:33.2614,lng:131.3617},
+  {label:'Day 7',name:'熊本城',        lat:32.8063,lng:130.7058},
+];
+
+const map=L.map('map',{scrollWheelZoom:false});
+L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png',{attribution:'© OpenStreetMap contributors',maxZoom:18}).addTo(map);
+
+const latlngs=days.map(d=>[d.lat,d.lng]);
+L.polyline(latlngs,{color:'#888',weight:2,dashArray:'6 5',opacity:.6}).addTo(map);
+
+days.forEach((d,i)=>{
+  const color=`hsl(${(i/days.length)*300+20},70%,52%)`;
+  const cm=L.circleMarker([d.lat,d.lng],{radius:10,fillColor:color,color:'#fff',weight:2,opacity:1,fillOpacity:.9}).addTo(map);
+  cm.bindPopup(`<b>${d.label}</b>｜${d.name}`,{offset:[0,-6]});
+  cm.on('mouseover',function(){this.setRadius(13);});
+  cm.on('mouseout', function(){this.setRadius(10);});
+});
+
+map.fitBounds(L.latLngBounds(latlngs),{padding:[40,40]});
+
+const legend=document.getElementById('map-legend');
+days.forEach((d,i)=>{
+  const color=`hsl(${(i/days.length)*300+20},70%,52%)`;
+  const el=document.createElement('div');
+  el.className='leg-item';
+  el.innerHTML=`<div class="leg-dot" style="background:${color}"></div><span>${d.label} ${d.name}</span>`;
+  legend.appendChild(el);
+});
+</script>
+</body>
+</html>
