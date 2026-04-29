@@ -97,20 +97,9 @@ a{color:inherit;text-decoration:none;}
 .sc-body{padding:18px 20px 20px;}
 .sc-name{font-family:var(--song);font-size:15px;font-weight:700;color:var(--ink);letter-spacing:.06em;margin-bottom:6px;}
 .sc-desc{font-size:12.5px;color:var(--mid);line-height:1.8;margin-bottom:11px;}
-.sc-hls{display:flex;flex-direction:column;gap:4px;margin-bottom:11px;}
-.sc-hl{font-size:12.5px;color:var(--ink2);display:flex;gap:7px;}
 .sc-foot{display:flex;align-items:flex-start;justify-content:space-between;padding-top:9px;border-top:1px solid var(--rule);font-family:var(--gara);font-size:11.5px;color:var(--mid);gap:10px;}
-.sc-tip{font-style:italic;color:var(--gold);text-align:right;max-width:52%;}
 
-/* ACCOM BAR (FOR TIMELINE) */
-.accom-bar{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px;padding:10px 14px;border:1px solid var(--rule);background:var(--white);border-radius:6px;margin-top:4px;}
-.ab-left{display:flex;align-items:center;gap:10px;}
-.ab-mark{width:3px;height:28px;background:var(--red);border-radius:2px;flex-shrink:0;}
-.ab-name{font-family:var(--song);font-size:13px;font-weight:700;color:var(--ink);letter-spacing:.05em;}
-.ab-sub{font-family:var(--gara);font-size:11px;color:var(--light);letter-spacing:.08em;}
-.ab-price{font-family:var(--gara);font-size:14px;color:var(--gold);white-space:nowrap;}
-
-/* ACCOMMODATION SECTION - UPDATED GRID */
+/* ACCOMMODATION SECTION */
 #accommodation{background:var(--warm);}
 .accom-city{margin-bottom:48px;}
 .city-head{font-family:var(--song);font-size:16px;font-weight:700;color:var(--ink);letter-spacing:.1em;padding-bottom:11px;border-bottom:1px solid var(--rule);margin-bottom:18px;display:flex;align-items:center;gap:10px;}
@@ -129,51 +118,22 @@ a{color:inherit;text-decoration:none;}
 .ac-btn{display:block;width:100%;padding:9px;background:var(--ink);color:#fff;text-align:center;border-radius:6px;font-family:var(--gara);font-size:11.5px;letter-spacing:.25em;text-transform:uppercase;transition:background .2s;cursor:pointer;border:none;}
 .ac-btn:hover{background:var(--red);}
 
-/* TIPS */
-#tips{background:var(--white);}
-.tips-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:16px;padding-bottom:80px;}
-.tip{background:var(--paper);border:1px solid var(--rule);border-radius:var(--r);padding:24px 22px;transition:transform .2s,box-shadow .2s;}
-.tip:hover{transform:translateY(-3px);box-shadow:var(--shadow);}
-.tip-icon{font-size:24px;margin-bottom:9px;display:block;}
-.tip-title{font-family:var(--song);font-size:13.5px;font-weight:700;color:var(--ink);letter-spacing:.05em;margin-bottom:7px;padding-left:9px;border-left:3px solid var(--red);}
-.tip-body{font-size:12.5px;color:var(--mid);line-height:1.9;}
-
 /* BUDGET */
 #budget{background:var(--ink);color:var(--paper);padding:72px 0;}
 .budget-inner{max-width:720px;margin:0 auto;padding:0 5%;}
-.budget-top{display:grid;grid-template-columns:1fr 1fr;gap:52px;align-items:start;margin-bottom:40px;}
-.budget-label{font-family:var(--gara);font-size:10px;letter-spacing:.5em;color:var(--light);text-transform:uppercase;margin-bottom:8px;}
-.budget-kanji{font-family:var(--song);font-weight:200;font-size:36px;line-height:1.2;letter-spacing:.1em;color:#f0e8d8;}
-.budget-note{font-family:var(--gara);font-style:italic;font-size:12.5px;color:var(--mid);line-height:1.7;padding-top:10px;border-top:1px solid #2a2018;}
 .blines{display:flex;flex-direction:column;}
 .bline{display:flex;justify-content:space-between;align-items:baseline;padding:12px 0;border-bottom:1px solid #2a2018;}
-.bline-cat{font-family:var(--song);font-size:13px;color:#c8bfae;}
-.bline-amt{font-family:var(--gara);font-size:16px;color:#f0ece3;}
 .btotal{display:flex;justify-content:space-between;align-items:baseline;padding:20px 0 0;margin-top:4px;}
-.bt-label{font-family:var(--gara);font-size:11px;letter-spacing:.4em;color:var(--light);text-transform:uppercase;}
 .bt-num{font-family:var(--gara);font-size:40px;color:#d4a020;letter-spacing:-.01em;line-height:1;}
-.bt-unit{font-size:13px;color:var(--mid);margin-left:5px;letter-spacing:.1em;}
-.parking-note{margin-top:36px;padding-top:20px;border-top:1px solid #2a2018;font-family:var(--gara);font-size:11.5px;color:var(--mid);letter-spacing:.12em;line-height:2;display:flex;flex-wrap:wrap;gap:4px 18px;}
-.parking-note strong{color:#c8bfae;}
 
-/* FOOTER */
 footer{background:var(--ink);border-top:3px solid var(--red);padding:32px 5%;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;}
-.ft-title{font-family:var(--song);font-weight:400;font-size:14px;letter-spacing:.15em;color:#f0e8d8;}
-.ft-date{font-family:var(--gara);font-size:13px;color:#5a4e3e;letter-spacing:.2em;}
-.ft-note{font-family:var(--gara);font-style:italic;font-size:12px;color:#3a3028;letter-spacing:.1em;}
 
-/* RWD */
 @media(max-width:760px){
   .nav-links{display:none;flex-direction:column;position:absolute;top:54px;left:0;right:0;background:var(--paper);border-bottom:1px solid var(--rule);padding:6px 0;}
   .nav-links.open{display:flex;}
-  .nav-links a{line-height:1;padding:13px 5%;}
   .nav-toggle{display:flex;}
-  .d-datetag{margin-left:0;}
   .accom-grid{grid-template-columns:1fr !important;}
   .ac{grid-column: span 1 !important;}
-  .spots,.tips-grid{grid-template-columns:1fr;}
-  .budget-top{grid-template-columns:1fr;gap:28px;}
-  footer{flex-direction:column;text-align:center;}
 }
 </style>
 </head>
@@ -185,7 +145,6 @@ footer{background:var(--ink);border-top:3px solid var(--red);padding:32px 5%;dis
     <li><a href="#route">路線圖</a></li>
     <li><a href="#days">每日行程</a></li>
     <li><a href="#accommodation">住宿</a></li>
-    <li><a href="#tips">旅遊提醒</a></li>
     <li><a href="#budget">預算</a></li>
   </ul>
   <div class="nav-toggle" onclick="document.getElementById('navLinks').classList.toggle('open')">
@@ -196,23 +155,19 @@ footer{background:var(--ink);border-top:3px solid var(--red);padding:32px 5%;dis
 <section id="hero">
   <div class="hero-deco"></div>
   <div class="hero-body">
-    <div class="hero-tag"><span class="hero-tag-line"></span><span class="hero-tag-text">Kumamoto · Autumn Self-Drive · 2026</span></div>
+    <div class="hero-tag"><span class="hero-tag-line"></span><span class="hero-tag-text">Kumamoto · Autumn 2026</span></div>
     <h1 class="hero-title">熊本<span class="g">銀杏</span>之旅</h1>
-    <p class="hero-sub">Eight days through autumn Kyushu — onsen, ginkgo gold &amp; scenic drives</p>
     <div class="hero-chips">
-      <span class="chip">✈ CI194 · 11/05 出發</span>
+      <span class="chip">✈ 11/05 出發</span>
       <span class="chip">8 天 7 夜</span>
-      <span class="chip">2 人自駕</span>
-      <span class="chip">🚗 SUV 11/06–11/10</span>
-      <span class="chip">🍂 秋季限定</span>
+      <span class="chip">🚗 SUV 自駕</span>
     </div>
   </div>
-  <div class="hero-scroll"><span class="scroll-txt">Scroll</span><div class="scroll-bar"></div></div>
 </section>
 
 <section id="route">
   <div class="wrap">
-    <div class="sec-head"><span class="eyebrow">Route Overview</span><h2 class="sec-title">行程路線圖</h2><div class="sec-rule"></div></div>
+    <div class="sec-head"><h2 class="sec-title">行程路線圖</h2><div class="sec-rule"></div></div>
     <div id="map"></div>
     <div id="map-legend"></div>
   </div>
@@ -220,191 +175,116 @@ footer{background:var(--ink);border-top:3px solid var(--red);padding:32px 5%;dis
 
 <section id="days">
   <div class="wrap">
-    <div class="sec-head"><span class="eyebrow">Day by Day</span><h2 class="sec-title">每日行程</h2><div class="sec-rule"></div></div>
+    <div class="sec-head"><h2 class="sec-title">每日行程</h2><div class="sec-rule"></div></div>
 
     <div class="day-block">
-      <div class="day-head"><span class="dn-label">Day</span><span class="dn-big">01</span><span class="d-title">抵達<span class="r">熊本</span>車站</span><span class="d-datetag">NOV 05 · THU</span></div>
+      <div class="day-head"><span class="dn-big">01</span><span class="d-title">抵達熊本</span><span class="d-datetag">11/05 THU</span></div>
       <div class="tl">
-        <div class="tl-row"><span class="tl-t">14:30</span><div class="tl-mid"><div class="tl-dot"></div><div class="tl-line"></div></div><div class="tl-info">CI194 桃園機場起飛<small>飛行時間約 3 小時</small></div></div>
-        <div class="tl-row"><span class="tl-t">17:30</span><div class="tl-mid"><div class="tl-dot"></div><div class="tl-line"></div></div><div class="tl-info">熊本機場落地</div></div>
-        <div class="tl-row"><span class="tl-t">18:15</span><div class="tl-mid"><div class="tl-dot"></div><div class="tl-line"></div></div><div class="tl-info">機場巴士出發<small>→ 熊本車站 19:10 抵達</small></div></div>
-      </div>
-      <div class="accom-bar"><div class="ab-left"><div class="ab-mark"></div><div><div class="ab-name">東橫 INN 熊本站前</div><div class="ab-sub">車站步行 · 含早餐</div></div></div><span class="ab-price">¥11,705 / 2人</span></div>
-    </div>
-
-    <div class="day-block">
-      <div class="day-head"><span class="dn-label">Day</span><span class="dn-big">02</span><span class="d-title"><span class="r">高千穗峽</span>晨衝 · 南阿蘇名水</span><span class="d-datetag">NOV 06 · FRI</span></div>
-      <div class="tl">
-        <div class="tl-row"><span class="tl-t">09:30</span><div class="tl-mid"><div class="tl-dot"></div><div class="tl-line"></div></div><div class="tl-info">熊本站前店取車出發 (SUV)</div></div>
-        <div class="tl-row"><span class="tl-t">11:00</span><div class="tl-mid"><div class="tl-dot"></div><div class="tl-line"></div></div><div class="tl-info">高千穗峽 划船賞楓<small>預約日 10/07</small></div></div>
-        <div class="tl-row"><span class="tl-t">14:40</span><div class="tl-mid"><div class="tl-dot"></div><div class="tl-line"></div></div><div class="tl-info">白川水源 (名水百選)</div></div>
-      </div>
-      <div class="accom-bar"><div class="ab-left"><div class="ab-mark"></div><div><div class="ab-name">Minshuku Asogen (阿蘇源)</div><div class="ab-sub">一泊二食 · 2晚連住</div></div></div><span class="ab-price">¥72,344 / 2人2晚</span></div>
-    </div>
-
-    <div class="day-block">
-      <div class="day-head"><span class="dn-label">Day</span><span class="dn-big">03</span><span class="d-title">阿蘇<span class="r">火口</span>芒草海 · 大觀峰</span><span class="d-datetag">NOV 07 · SAT</span></div>
-      <div class="tl">
-        <div class="tl-row"><span class="tl-t">09:30</span><div class="tl-mid"><div class="tl-dot"></div><div class="tl-line"></div></div><div class="tl-info">阿蘇火口 · 草千里<small>金黃芒草季</small></div></div>
-        <div class="tl-row"><span class="tl-t">12:30</span><div class="tl-mid"><div class="tl-dot"></div><div class="tl-line"></div></div><div class="tl-info">大觀峰 (360度環景)</div></div>
+        <div class="tl-row"><span class="tl-t">起點</span><div class="tl-mid"><div class="tl-dot"></div><div class="tl-line"></div></div><div class="tl-info">桃園機場 (CI194)</div></div>
+        <div class="tl-row"><span class="tl-t">19:10</span><div class="tl-mid"><div class="tl-dot"></div><div class="tl-line"></div></div><div class="tl-info">抵達熊本車站</div></div>
+        <div class="tl-row"><span class="tl-t">住宿</span><div class="tl-mid"><div class="tl-dot"></div><div class="tl-line"></div></div><div class="tl-info">東橫 INN 熊本站前 (¥11,705)</div></div>
       </div>
     </div>
 
     <div class="day-block">
-      <div class="day-head"><span class="dn-label">Day</span><span class="dn-big">04</span><span class="d-title"><span class="r">牧之戶峠</span> · 九重吊橋 · 黑川溫泉</span><span class="d-datetag">NOV 08 · SUN</span></div>
+      <div class="day-head"><span class="dn-big">02</span><span class="d-title">高千穗晨衝</span><span class="d-datetag">11/06 FRI</span></div>
       <div class="tl">
-        <div class="tl-row"><span class="tl-t">10:00</span><div class="tl-mid"><div class="tl-dot"></div><div class="tl-line"></div></div><div class="tl-info">牧之戶峠 (海拔 1330m)</div></div>
-        <div class="tl-row"><span class="tl-t">14:30</span><div class="tl-mid"><div class="tl-dot"></div><div class="tl-line"></div></div><div class="tl-info">黑川溫泉入住</div></div>
+        <div class="tl-row"><span class="tl-t">起點</span><div class="tl-mid"><div class="tl-dot"></div><div class="tl-line"></div></div><div class="tl-info">東橫 INN 熊本站前</div></div>
+        <div class="tl-row"><span class="tl-t">09:30</span><div class="tl-mid"><div class="tl-dot"></div><div class="tl-line"></div></div><div class="tl-info">取車出發 (SUV)</div></div>
+        <div class="tl-row"><span class="tl-t">11:00</span><div class="tl-mid"><div class="tl-dot"></div><div class="tl-line"></div></div><div class="tl-info">高千穗峽 (划船預約日 10/07)</div></div>
+        <div class="tl-row"><span class="tl-t">住宿</span><div class="tl-mid"><div class="tl-dot"></div><div class="tl-line"></div></div><div class="tl-info">Minshuku Asogen (一泊二食)</div></div>
       </div>
-      <div class="accom-bar"><div class="ab-left"><div class="ab-mark" style="background:var(--gold)"></div><div><div class="ab-name">Ryokan Yunosako</div><div class="ab-sub">一泊二食</div></div></div><span class="ab-price">¥34,896 / 2人</span></div>
     </div>
 
     <div class="day-block">
-      <div class="day-head"><span class="dn-label">Day</span><span class="dn-big">05</span><span class="d-title">動物 Safari → <span class="r">別府</span>地獄</span><span class="d-datetag">NOV 09 · MON</span></div>
+      <div class="day-head"><span class="dn-big">03</span><span class="d-title">阿蘇火口芒草海</span><span class="d-datetag">11/07 SAT</span></div>
       <div class="tl">
+        <div class="tl-row"><span class="tl-t">起點</span><div class="tl-mid"><div class="tl-dot"></div><div class="tl-line"></div></div><div class="tl-info">Minshuku Asogen</div></div>
+        <div class="tl-row"><span class="tl-t">全日</span><div class="tl-mid"><div class="tl-dot"></div><div class="tl-line"></div></div><div class="tl-info">阿蘇火口、草千里、大觀峰</div></div>
+        <div class="tl-row"><span class="tl-t">住宿</span><div class="tl-mid"><div class="tl-dot"></div><div class="tl-line"></div></div><div class="tl-info">Minshuku Asogen (連住 ¥72,344/2晚)</div></div>
+      </div>
+    </div>
+
+    <div class="day-block">
+      <div class="day-head"><span class="dn-big">04</span><span class="d-title">山並公路與黑川</span><span class="d-datetag">11/08 SUN</span></div>
+      <div class="tl">
+        <div class="tl-row"><span class="tl-t">起點</span><div class="tl-mid"><div class="tl-dot"></div><div class="tl-line"></div></div><div class="tl-info">Minshuku Asogen</div></div>
+        <div class="tl-row"><span class="tl-t">上午</span><div class="tl-mid"><div class="tl-dot"></div><div class="tl-line"></div></div><div class="tl-info">牧之戶峠 (海拔 1330m)</div></div>
+        <div class="tl-row"><span class="tl-t">住宿</span><div class="tl-mid"><div class="tl-dot"></div><div class="tl-line"></div></div><div class="tl-info">Ryokan Yunosako (一泊二食 ¥34,896)</div></div>
+      </div>
+    </div>
+
+    <div class="day-block">
+      <div class="day-head"><span class="dn-big">05</span><span class="d-title">動物園 Safari</span><span class="d-datetag">11/09 MON</span></div>
+      <div class="tl">
+        <div class="tl-row"><span class="tl-t">起點</span><div class="tl-mid"><div class="tl-dot"></div><div class="tl-line"></div></div><div class="tl-info">Ryokan Yunosako (黑川)</div></div>
         <div class="tl-row"><span class="tl-t">10:00</span><div class="tl-mid"><div class="tl-dot"></div><div class="tl-line"></div></div><div class="tl-info">九州自然動物園 (自駕巡遊)</div></div>
-        <div class="tl-row"><span class="tl-t">15:00</span><div class="tl-mid"><div class="tl-dot"></div><div class="tl-line"></div></div><div class="tl-info">海地獄 (鈷藍奇景)</div></div>
-      </div>
-      <div class="accom-bar"><div class="ab-left"><div class="ab-mark" style="background:var(--ink)"></div><div><div class="ab-name">日本旅館 器 別府鉄輪</div><div class="ab-sub">純住宿</div></div></div><span class="ab-price">¥21,624 / 2人</span></div>
-    </div>
-
-    <div class="day-block">
-      <div class="day-head"><span class="dn-label">Day</span><span class="dn-big">06</span><span class="d-title">由布院漫遊 → 返熊本還車</span><span class="d-datetag">NOV 10 · TUE</span></div>
-      <div class="tl">
-        <div class="tl-row"><span class="tl-t">10:30</span><div class="tl-mid"><div class="tl-dot"></div><div class="tl-line"></div></div><div class="tl-info">由布院金鱗湖散策 (5h)</div></div>
-        <div class="tl-row"><span class="tl-t">17:30</span><div class="tl-mid"><div class="tl-dot"></div><div class="tl-line"></div></div><div class="tl-info">熊本站前店還車</div></div>
-      </div>
-      <div class="accom-bar"><div class="ab-left"><div class="ab-mark"></div><div><div class="ab-name">Dormy Inn 熊本</div><div class="ab-sub">天然溫泉 · 2晚連住</div></div></div><span class="ab-price">¥30,609 / 2人2晚</span></div>
-    </div>
-
-    <div class="day-block">
-      <div class="day-head"><span class="dn-label">Day</span><span class="dn-big">07</span><span class="d-title">熊本城銀杏祭 · 市區大採買</span><span class="d-datetag">NOV 11 · WED</span></div>
-      <div class="tl">
-        <div class="tl-row"><span class="tl-t">上午</span><div class="tl-mid"><div class="tl-dot"></div><div class="tl-line"></div></div><div class="tl-info">熊本城銀杏金黃地毯</div></div>
-        <div class="tl-row"><span class="tl-t">下午</span><div class="tl-mid"><div class="tl-dot"></div><div class="tl-line"></div></div><div class="tl-info">上下通商圈藥妝採買</div></div>
+        <div class="tl-row"><span class="tl-t">住宿</span><div class="tl-mid"><div class="tl-dot"></div><div class="tl-line"></div></div><div class="tl-info">日本旅館 器 別府鉄輪 (¥21,624)</div></div>
       </div>
     </div>
 
     <div class="day-block">
-      <div class="day-head"><span class="dn-label">Day</span><span class="dn-big">08</span><span class="d-title">賦歸</span><span class="d-datetag">NOV 12 · THU</span></div>
+      <div class="day-head"><span class="dn-big">06</span><span class="d-title">由布院漫遊</span><span class="d-datetag">11/10 TUE</span></div>
       <div class="tl">
-        <div class="tl-row"><span class="tl-t">15:00</span><div class="tl-mid"><div class="tl-dot"></div><div class="tl-line"></div></div><div class="tl-info">搭巴士往機場</div></div>
-        <div class="tl-row"><span class="tl-t">18:30</span><div class="tl-mid"><div class="tl-dot"></div><div class="tl-line"></div></div><div class="tl-info">CI195 起飛</div></div>
+        <div class="tl-row"><span class="tl-t">起點</span><div class="tl-mid"><div class="tl-dot"></div><div class="tl-line"></div></div><div class="tl-info">器 別府鉄輪</div></div>
+        <div class="tl-row"><span class="tl-t">10:30</span><div class="tl-mid"><div class="tl-dot"></div><div class="tl-line"></div></div><div class="tl-info">由布院散策 ➔ 返熊本還車</div></div>
+        <div class="tl-row"><span class="tl-t">住宿</span><div class="tl-mid"><div class="tl-dot"></div><div class="tl-line"></div></div><div class="tl-info">Dormy Inn 熊本 (天然溫泉)</div></div>
       </div>
     </div>
 
+    <div class="day-block">
+      <div class="day-head"><span class="dn-big">07</span><span class="d-title">熊本城銀杏</span><span class="d-datetag">11/11 WED</span></div>
+      <div class="tl">
+        <div class="tl-row"><span class="tl-t">起點</span><div class="tl-mid"><div class="tl-dot"></div><div class="tl-line"></div></div><div class="tl-info">Dormy Inn 熊本</div></div>
+        <div class="tl-row"><span class="tl-t">上午</span><div class="tl-mid"><div class="tl-dot"></div><div class="tl-line"></div></div><div class="tl-info">熊本城銀杏 ➔ 市區採買</div></div>
+        <div class="tl-row"><span class="tl-t">住宿</span><div class="tl-mid"><div class="tl-dot"></div><div class="tl-line"></div></div><div class="tl-info">Dormy Inn 熊本 (連住 ¥30,609/2晚)</div></div>
+      </div>
+    </div>
   </div>
 </section>
 
 <section id="accommodation">
   <div class="wrap">
-    <div class="sec-head"><span class="eyebrow">Where to Stay</span><h2 class="sec-title">住宿一覽</h2><div class="sec-rule"></div></div>
-
+    <div class="sec-head"><h2 class="sec-title">住宿一覽</h2><div class="sec-rule"></div></div>
     <div class="accom-city">
-      <div class="city-head">第一階段：行程開啟 <span class="city-tag">Day 1 – Day 3</span></div>
+      <div class="city-head">第一階段：行程開啟 <span class="city-tag">Day 1 – 3</span></div>
       <div class="accom-grid">
-        <div class="ac">
-          <div class="ac-stars">★★★</div>
-          <div class="ac-name">東橫 INN 熊本站前</div>
-          <div class="ac-type">Day 1 · 熊本站</div>
-          <div class="ac-price">¥11,705 <span>/ 2人</span></div>
-          <div class="ac-feats"><span class="feat">🚉 車站步行</span><span class="feat">🥐 早餐免費</span></div>
-          <button class="ac-btn" onclick="window.open('https://www.toyoko-inn.com/search/detail/00238','_blank')">查看訂房</button>
-        </div>
-        <div class="ac" style="grid-column: span 2;">
-          <div class="ac-badge">已選定</div>
-          <div class="ac-stars">★★★★</div>
-          <div class="ac-name">Minshuku Asogen (阿蘇源)</div>
-          <div class="ac-type">Day 2 – 3 · 南阿蘇</div>
-          <div class="ac-price">¥72,344 <span>/ 2人2晚 (含餐)</span></div>
-          <div class="ac-feats"><span class="feat">♨️ 溫泉</span><span class="feat">🍱 一泊二食</span><span class="feat">🏔️ 阿蘇景觀</span></div>
-          <button class="ac-btn" onclick="window.open('https://www.booking.com/searchresults.html?ss=Minshuku+Asogen','_blank')">查看訂房</button>
-        </div>
+        <div class="ac"><div class="ac-name">東橫 INN 熊本站前</div><div class="ac-price">¥11,705 <span>/ 2人</span></div><button class="ac-btn" onclick="window.open('https://www.toyoko-inn.com/search/detail/00238')">查看訂房</button></div>
+        <div class="ac" style="grid-column: span 2;"><div class="ac-badge">連住</div><div class="ac-name">Minshuku Asogen</div><div class="ac-price">¥72,344 <span>/ 2晚</span></div><button class="ac-btn" onclick="window.open('https://www.booking.com/hotel/jp/minshuku-asogen')">查看訂房</button></div>
       </div>
     </div>
-
     <div class="accom-city">
-      <div class="city-head">第二階段：山海探險 <span class="city-tag">Day 4 – Day 6</span></div>
+      <div class="city-head">第二階段：山海探險 <span class="city-tag">Day 4 – 6</span></div>
       <div class="accom-grid">
-        <div class="ac">
-          <div class="ac-stars">★★★★★</div>
-          <div class="ac-name">Ryokan Yunosako</div>
-          <div class="ac-type">Day 4 · 黑川溫泉</div>
-          <div class="ac-price">¥34,896 <span>/ 2人 (含餐)</span></div>
-          <div class="ac-feats"><span class="feat">♨️ 露天風呂</span><span class="feat">🎋 懷石料理</span></div>
-          <button class="ac-btn" onclick="window.open('https://www.booking.com/searchresults.html?ss=Kurokawa+Onsen+Yunosako','_blank')">查看訂房</button>
-        </div>
-        <div class="ac">
-          <div class="ac-stars">★★★★</div>
-          <div class="ac-name">日本旅館 器 別府鉄輪</div>
-          <div class="ac-type">Day 5 · 別府鐵輪</div>
-          <div class="ac-price">¥21,624 <span>/ 2人</span></div>
-          <div class="ac-feats"><span class="feat">🏮 日式風情</span><span class="feat">🌆 地獄蒸</span></div>
-          <button class="ac-btn" onclick="window.open('https://www.booking.com/searchresults.html?ss=Beppu+Kannawa+Utsuwa','_blank')">查看訂房</button>
-        </div>
-        <div class="ac">
-          <div class="ac-stars">★★★★</div>
-          <div class="ac-name">Dormy Inn 熊本</div>
-          <div class="ac-type">Day 6 · 熊本市中心</div>
-          <div class="ac-price">連住首晚 <span>含溫泉</span></div>
-          <div class="ac-feats"><span class="feat">♨️ 天然溫泉</span><span class="feat">🍜 宵夜拉麵</span></div>
-          <button class="ac-btn" onclick="window.open('https://www.hotespa.net/hotels/kumamoto/','_blank')">查看訂房</button>
-        </div>
+        <div class="ac"><div class="ac-name">Ryokan Yunosako</div><div class="ac-price">¥34,896 <span>/ 2人</span></div><button class="ac-btn" onclick="window.open('https://www.booking.com/hotel/jp/ryokan-yunosako')">查看訂房</button></div>
+        <div class="ac"><div class="ac-name">日本旅館 器 別府鉄輪</div><div class="ac-price">¥21,624 <span>/ 2人</span></div><button class="ac-btn" onclick="window.open('https://www.booking.com/hotel/jp/utsuwa-kannawa')">查看訂房</button></div>
+        <div class="ac"><div class="ac-name">Dormy Inn 熊本</div><div class="ac-price">首晚 <span>含溫泉</span></div><button class="ac-btn" onclick="window.open('https://www.hotespa.net/hotels/kumamoto/')">查看訂房</button></div>
       </div>
     </div>
-
     <div class="accom-city" style="padding-bottom:80px">
-      <div class="city-head">第三階段：採買賦歸 <span class="city-tag">Day 7 – Day 8</span></div>
+      <div class="city-head">第三階段：賦歸 <span class="city-tag">Day 7 – 8</span></div>
       <div class="accom-grid">
-        <div class="ac" style="grid-column: span 3;">
-          <div class="ac-badge">最終回</div>
-          <div class="ac-stars">★★★★</div>
-          <div class="ac-name">Dormy Inn 熊本 (續住與賦歸)</div>
-          <div class="ac-type">Day 7 – 8 · 熊本市中心</div>
-          <div class="ac-price">¥30,609 <span>/ 2人2晚 (含早)</span></div>
-          <div class="ac-feats"><span class="feat">🏙️ 鄰近商圈</span><span class="feat">🍳 豐盛早餐</span><span class="feat">🚌 機場巴士</span></div>
-          <button class="ac-btn" onclick="window.open('https://www.hotespa.net/hotels/kumamoto/','_blank')">查看訂房</button>
-        </div>
+        <div class="ac" style="grid-column: span 3;"><div class="ac-badge">連住</div><div class="ac-name">Dormy Inn 熊本 (續住)</div><div class="ac-price">¥30,609 <span>/ 2晚</span></div><button class="ac-btn" onclick="window.open('https://www.hotespa.net/hotels/kumamoto/')">查看訂房</button></div>
       </div>
-    </div>
-  </div>
-</section>
-
-<section id="tips">
-  <div class="wrap">
-    <div class="sec-head"><span class="eyebrow">Travel Notes</span><h2 class="sec-title">旅遊提醒</h2><div class="sec-rule"></div></div>
-    <div class="tips-grid">
-      <div class="tip"><span class="tip-icon">🧳</span><div class="tip-title">行李策略</div><p class="tip-body">SUV 後箱放 2 個 28 吋剛好。由布院採買物品建議放後座。</p></div>
-      <div class="tip"><span class="tip-icon">🚗</span><div class="tip-title">輪流駕駛</div><p class="tip-body">Day 6 回程高速段筆直，建議每 1.5 小時輪換司機。</p></div>
-      <div class="tip"><span class="tip-icon">🌡️</span><div class="tip-title">穿衣建議</div><p class="tip-body">山區早晚僅 5–8°C，務必備厚外套。</p></div>
-      <div class="tip"><span class="tip-icon">🚣</span><div class="tip-title">划船預約</div><p class="tip-body">高千穗划船於 10/07 開放預約，旺季必搶。</p></div>
     </div>
   </div>
 </section>
 
 <section id="budget">
   <div class="budget-inner">
-    <div class="sec-head" style="padding-top:0"><span class="eyebrow" style="color:var(--light)">Budget Breakdown</span><h2 class="sec-title" style="color:#f0e8d8">預算明細</h2><div class="sec-rule"></div></div>
-    <div class="budget-top">
-      <div>
-        <div class="budget-label">2人行預估支出</div>
-        <div class="budget-kanji">予算<br>明細</div>
-        <p class="budget-note">單位：日圓 (JPY)</p>
-      </div>
-      <div class="blines">
-        <div class="bline"><span class="bline-cat">住宿總費</span><span class="bline-amt">¥171,178</span></div>
-        <div class="bline"><span class="bline-cat">租車 + 全險</span><span class="bline-amt">¥56,000</span></div>
-        <div class="bline"><span class="bline-cat">其餘支出(門票/油)</span><span class="bline-amt">¥27,000</span></div>
-        <div class="btotal"><span class="bt-label">Total</span><span><span class="bt-num">¥254,178</span><span class="bt-unit">JPY</span></span></div>
-      </div>
+    <div class="sec-head"><h2 class="sec-title" style="color:#f0e8d8">預算明細</h2></div>
+    <div class="blines">
+      <div class="bline"><span>住宿總額</span><span class="bline-amt">¥171,178</span></div>
+      <div class="bline"><span>租車全險</span><span class="bline-amt">¥56,000</span></div>
+      <div class="bline"><span>其餘預估</span><span class="bline-amt">¥27,000</span></div>
+      <div class="btotal"><span>Total</span><span class="bt-num">¥254,178</span></div>
     </div>
   </div>
 </section>
 
 <footer>
   <span class="ft-title">熊本銀杏之旅</span>
-  <span class="ft-date">NOV 05 – 12 · 2026</span>
-  <span class="ft-note">旅途愉快 · 銀杏常在心間</span>
+  <span class="ft-date">2026.11.05 – 11.12</span>
 </footer>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
@@ -421,24 +301,46 @@ document.querySelectorAll('.day-block').forEach((el,i)=>{
 });
 
 const days=[
-  {label:'D1',name:'熊本站', lat:32.8031,lng:130.7079},
-  {label:'D2',name:'高千穗峽', lat:32.7061,lng:131.2919},
-  {label:'D3',name:'阿蘇火口', lat:32.8837,lng:131.0869},
-  {label:'D4',name:'黑川溫泉', lat:33.0768,lng:131.1396},
-  {label:'D5',name:'別府地獄', lat:33.3155,lng:131.4721},
-  {label:'D6',name:'由布院', lat:33.2614,lng:131.3617},
-  {label:'D7',name:'熊本城', lat:32.8063,lng:130.7058},
+  {label:'Day 1',name:'熊本站', lat:32.8031,lng:130.7079},
+  {label:'Day 2',name:'高千穗峽', lat:32.7061,lng:131.2919},
+  {label:'Day 3',name:'阿蘇火口', lat:32.8837,lng:131.0869},
+  {label:'Day 4',name:'黑川溫泉', lat:33.0768,lng:131.1396},
+  {label:'Day 5',name:'別府地獄', lat:33.3155,lng:131.4721},
+  {label:'Day 6',name:'由布院', lat:33.2614,lng:131.3617},
+  {label:'Day 7',name:'熊本城', lat:32.8063,lng:130.7058},
 ];
 
 const map=L.map('map',{scrollWheelZoom:false});
 L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(map);
+
 const latlngs=days.map(d=>[d.lat,d.lng]);
-L.polyline(latlngs,{color:'#888',weight:2,dashArray:'6 5'}).addTo(map);
+L.polyline(latlngs,{color:'#888',weight:2,dashArray:'6 5',opacity:.6}).addTo(map);
 
 days.forEach((d,i)=>{
-  L.circleMarker([d.lat,d.lng],{radius:8,fillColor:'#b8232a',color:'#fff',weight:2,fillOpacity:0.9}).addTo(map).bindPopup(d.label+': '+d.name);
+  // 關鍵修復：使用 hsl 根據索引 i 生成不同顏色
+  const color = `hsl(${(i / days.length) * 300 + 20}, 70%, 52%)`;
+  const cm = L.circleMarker([d.lat, d.lng], {
+    radius: 10,
+    fillColor: color,
+    color: '#fff',
+    weight: 2,
+    opacity: 1,
+    fillOpacity: 0.9
+  }).addTo(map);
+  cm.bindPopup(`<b>${d.label}</b>｜${d.name}`);
 });
+
 map.fitBounds(L.latLngBounds(latlngs),{padding:[40,40]});
+
+// 更新 Legend 顏色
+const legend=document.getElementById('map-legend');
+days.forEach((d,i)=>{
+  const color = `hsl(${(i / days.length) * 300 + 20}, 70%, 52%)`;
+  const el=document.createElement('div');
+  el.className='leg-item';
+  el.innerHTML=`<div class="leg-dot" style="background:${color}"></div><span>${d.label} ${d.name}</span>`;
+  legend.appendChild(el);
+});
 </script>
 </body>
 </html>
