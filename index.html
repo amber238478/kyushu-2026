@@ -139,6 +139,10 @@ a{color:inherit;text-decoration:none;}
   .accom-row-3,.accom-row-mid,.accom-row-last{grid-template-columns:1fr;}
 }
 
+/* CAR RENTAL */
+#car{background:var(--white);}
+.car-info-bar{display:flex;align-items:center;gap:12px;padding:10px 16px;background:var(--warm);border:1px solid var(--rule);border-radius:6px;font-family:var(--gara);font-size:12.5px;color:var(--mid);letter-spacing:.08em;margin-bottom:4px;}
+
 /* TIPS */
 #tips{background:var(--white);}
 .tips-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:16px;padding-bottom:80px;}
@@ -192,6 +196,7 @@ footer{background:var(--ink);border-top:3px solid var(--red);padding:32px 5%;dis
   <ul class="nav-links" id="navLinks">
     <li><a href="#route">路線圖</a></li>
     <li><a href="#days">每日行程</a></li>
+    <li><a href="#car">租車</a></li>
     <li><a href="#accommodation">住宿</a></li>
     <li><a href="#tips">旅遊提醒</a></li>
     <li><a href="#budget">預算</a></li>
@@ -353,6 +358,52 @@ footer{background:var(--ink);border-top:3px solid var(--red);padding:32px 5%;dis
   </div>
 </section>
 
+<section id="car">
+  <div class="wrap">
+    <div class="sec-head"><span class="eyebrow">Self-Drive</span><h2 class="sec-title">租車方案</h2><div class="sec-rule"></div></div>
+    <div class="car-info-bar">
+      <span>🚗</span>
+      <span>取車 11/06（Day 2）熊本駅東口 · 還車 11/10（Day 6）熊本駅前店 · 共 4 日 · SUV 5人乗</span>
+    </div>
+    <div class="accom-row accom-row-mid" style="margin-top:24px;padding-bottom:80px;">
+      <div>
+        <div class="accom-row-label">Toyota Rent a Car · 熊本駅前</div>
+        <div class="ac">
+          <div class="ac-badge">已選定</div>
+          <div class="ac-stars">★★★★★</div>
+          <div class="ac-name">Toyota Rent a Car 熊本駅前店</div>
+          <div class="ac-type">SUV · RAV4 HEV / Yaris Cross</div>
+          <div class="ac-price">¥56,000 <span>/ 4日・全險込（2人）</span></div>
+          <div class="ac-feats"><span class="feat">🛰️ GPS</span><span class="feat">🏷️ ETC</span><span class="feat">📹 行車紀錄器</span><span class="feat">🔄 AT</span><span class="feat">🚶 駅東口 3分</span></div>
+          <button class="ac-btn" onclick="window.open('https://rent.toyota.co.jp/eng/','_blank')">前往預約</button>
+        </div>
+      </div>
+      <div>
+        <div class="accom-row-label">Nippon Rent-A-Car · 備選</div>
+        <div class="ac">
+          <div class="ac-stars">★★★★</div>
+          <div class="ac-name">ニッポンレンタカー 熊本駅新幹線口</div>
+          <div class="ac-type">SUV · Corolla Cross / Eclipse Cross（EX級）</div>
+          <div class="ac-price"><span style="font-size:13px;color:var(--mid);">另行比價・EX級</span></div>
+          <div class="ac-feats"><span class="feat">🛰️ GPS</span><span class="feat">🏷️ ETC</span><span class="feat">👥 5人乗</span><span class="feat">🌐 英語 OK</span><span class="feat">🚶 新幹線口 5分</span></div>
+          <button class="ac-btn" onclick="window.open('https://www.nipponrentacar.co.jp/en/nrglobal/','_blank')">查看方案</button>
+        </div>
+      </div>
+      <div>
+        <div class="accom-row-label">ORIX Rent a Car · 備選</div>
+        <div class="ac">
+          <div class="ac-stars">★★★★</div>
+          <div class="ac-name">ORIX レンタカー 熊本駅・空港</div>
+          <div class="ac-type">SUV · RAV4 / Rocky</div>
+          <div class="ac-price"><span style="font-size:13px;color:var(--mid);">另行比價・早割 20%</span></div>
+          <div class="ac-feats"><span class="feat">🛰️ GPS</span><span class="feat">🏷️ ETC</span><span class="feat">✈️ 空港取車可</span><span class="feat">💸 早割 20%</span><span class="feat">🚶 西口 5分</span></div>
+          <button class="ac-btn" onclick="window.open('https://car.orix.co.jp/eng/','_blank')">查看方案</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <section id="accommodation">
   <div class="wrap">
     <div class="sec-head"><span class="eyebrow">Where to Stay</span><h2 class="sec-title">住宿一覽</h2><div class="sec-rule"></div></div>
@@ -411,40 +462,15 @@ footer{background:var(--ink);border-top:3px solid var(--red);padding:32px 5%;dis
         </div>
       </div>
       <div>
-        <div class="accom-row-label">Day 6 · 熊本首晚</div>
+        <div class="accom-row-label">Day 6–8 · 熊本市區連住</div>
         <div class="ac">
           <div class="ac-badge">已選定</div>
           <div class="ac-stars">★★★★</div>
           <div class="ac-name">Dormy Inn 熊本</div>
           <div class="ac-type">商務飯店 · 天然溫泉</div>
           <div class="ac-price">¥30,609 <span>/ 2人2晚（含早餐）</span></div>
-          <div class="ac-feats"><span class="feat">♨️ 天然溫泉</span><span class="feat">🍜 夜鳴きラーメン</span><span class="feat">🍳 含早餐</span><span class="feat">🏙️ 市中心</span></div>
+          <div class="ac-feats"><span class="feat">♨️ 天然溫泉</span><span class="feat">🍜 夜鳴きラーメン</span><span class="feat">🍳 含早餐</span><span class="feat">🏙️ 市中心</span><span class="feat">🧳 免搬行李</span></div>
           <button class="ac-btn" onclick="window.open('https://www.hotespa.net/hotels/kumamoto/','_blank')">查看訂房</button>
-        </div>
-      </div>
-    </div>
-
-    <!-- 第三排：Day 7–8 熊本連住 -->
-    <div class="accom-row accom-row-last" style="padding-bottom:80px">
-      <div>
-        <div class="accom-row-label">Day 7–8 · 熊本市區連住</div>
-        <div class="ac">
-          <div class="ac-stars">★★★★</div>
-          <div class="ac-name">Dormy Inn 熊本（連住）</div>
-          <div class="ac-type">商務飯店 · 天然溫泉</div>
-          <div class="ac-price">¥30,609 <span>/ 2人2晚（已含 Day 6）</span></div>
-          <div class="ac-feats"><span class="feat">♨️ 天然溫泉</span><span class="feat">🍳 含早餐</span><span class="feat">🏙️ 上下通步行</span></div>
-          <button class="ac-btn" onclick="window.open('https://www.hotespa.net/hotels/kumamoto/','_blank')">查看訂房</button>
-        </div>
-      </div>
-      <div>
-        <div class="accom-row-label">備注</div>
-        <div class="ac" style="background:var(--paper);box-shadow:none;border-style:dashed;">
-          <div class="ac-name" style="font-size:13px;color:var(--mid)">Day 6–8 同一飯店連住</div>
-          <div class="ac-type">共 3 晚 · 免搬行李</div>
-          <div style="margin-top:12px;font-family:var(--gara);font-size:12px;color:var(--light);line-height:1.8;">
-            還車後直接入住<br>可步行至熊本城銀杏<br>上下通商圈徒步 5 分
-          </div>
         </div>
       </div>
     </div>
@@ -536,16 +562,27 @@ const days=[
 
 // 每天固定顏色（8天）
 const dayColors = {};
+const dayLineColors = {};
 const totalDays = 8;
 for(let i=1; i<=totalDays; i++){
-  dayColors[i] = `hsl(${((i-1)/totalDays)*300+20},70%,52%)`;
+  const hue = ((i-1)/totalDays)*300+20;
+  dayColors[i] = `hsl(${hue},70%,52%)`;
+  dayLineColors[i] = `hsl(${hue},78%,36%)`; // 稍深實線
 }
 
 const map=L.map('map',{scrollWheelZoom:false});
 L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png',{attribution:'© OpenStreetMap contributors',maxZoom:18}).addTo(map);
 
 const latlngs=days.map(d=>[d.lat,d.lng]);
-L.polyline(latlngs,{color:'#888',weight:2,dashArray:'6 5',opacity:.6}).addTo(map);
+// 同一天用同色實線，跨天用淡灰虛線
+for(let i=0;i<days.length-1;i++){
+  const a=days[i],b=days[i+1];
+  if(a.day===b.day){
+    L.polyline([[a.lat,a.lng],[b.lat,b.lng]],{color:dayLineColors[a.day],weight:2.5,opacity:.88}).addTo(map);
+  } else {
+    L.polyline([[a.lat,a.lng],[b.lat,b.lng]],{color:'#b0a898',weight:1.5,dashArray:'4 7',opacity:.38}).addTo(map);
+  }
+}
 
 days.forEach((d)=>{
   const color = dayColors[d.day];
