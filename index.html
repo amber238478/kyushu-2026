@@ -187,6 +187,18 @@ footer{background:var(--ink);border-top:3px solid var(--red);padding:32px 5%;dis
   .budget-top{grid-template-columns:1fr;gap:28px;}
   footer{flex-direction:column;text-align:center;}
 }
+
+/* EDIT MODE */
+#editToolbar{position:fixed;bottom:16px;right:16px;z-index:2000;display:flex;flex-direction:column;align-items:flex-end;gap:8px;font-family:var(--gara);}
+#editToolbar .row{display:flex;gap:8px;}
+.edit-btn{background:var(--ink);color:#fff;padding:9px 16px;border-radius:100px;font-family:var(--gara);font-size:13px;letter-spacing:.06em;border:none;cursor:pointer;box-shadow:var(--shadow-h);transition:background .2s;white-space:nowrap;}
+.edit-btn:hover{background:var(--red);}
+.edit-btn.secondary{background:var(--white);color:var(--ink);border:1px solid var(--rule);}
+.edit-btn.secondary:hover{background:var(--warm);color:var(--ink);}
+#editHint{max-width:230px;background:var(--white);border:1px solid var(--rule);border-radius:8px;padding:9px 13px;font-size:12.5px;color:var(--mid);line-height:1.6;box-shadow:var(--shadow);}
+body.edit-mode [contenteditable="true"]{outline:1px dashed var(--gold);outline-offset:3px;cursor:text;border-radius:3px;}
+body.edit-mode [contenteditable="true"]:hover{outline:1px dashed var(--red);}
+body.edit-mode [contenteditable="true"]:focus{outline:2px solid var(--red);background:rgba(184,35,42,.05);}
 </style>
 </head>
 <body>
@@ -610,6 +622,100 @@ days.forEach((d)=>{
   el.innerHTML=`<div class="leg-dot" style="background:${color}"></div><span><b>${d.label}</b> ${spots}</span>`;
   legend.appendChild(el);
 });
+</script>
+
+<script>
+/* ===== 行程內容線上編輯（獨立於地圖腳本，避免地圖載入失敗時連帶失效） ===== */
+(function(){
+  const EDIT_SELECTOR = [
+    '.d-title','.d-datetag','.depart-text','.tl-t','.tl-info',
+    '.sc-name','.sc-desc','.sc-hl','.sc-tip',
+    '.ac-name','.ac-type','.ac-price',
+    '.ab-name','.ab-sub','.ab-price',
+    '.tip-title','.tip-body',
+    '.bline-cat','.bline-amt','.bt-num',
+    '.car-info-bar span:nth-child(2)','.parking-note span'
+  ].join(',');
+  const STORAGE_KEY='kumamoto_trip_edits_v1';
+
+  function getEls(){ return Array.from(document.querySelectorAll(EDIT_SELECTOR)); }
+  function assignIds(){ getEls().forEach((el,i)=>{ if(!el.dataset.eid) el.dataset.eid='e'+i; }); }
+  function readStore(){ try{ return JSON.parse(localStorage.getItem(STORAGE_KEY)||'{}'); }catch(e){ return {}; } }
+
+  function loadEdits(){
+    const saved=readStore();
+    Object.keys(saved).forEach(id=>{
+      const el=document.querySelector('[data-eid="'+id+'"]');
+      if(el) el.innerHTML=saved[id];
+    });
+  }
+
+  function saveEdit(el){
+    const saved=readStore();
+    saved[el.dataset.eid]=el.innerHTML;
+    localStorage.setItem(STORAGE_KEY,JSON.stringify(saved));
+  }
+
+  assignIds();
+  loadEdits();
+
+  const toolbar=document.createElement('div');
+  toolbar.id='editToolbar';
+  toolbar.innerHTML=`
+    <div id="editHint" style="display:none;">點一下任何行程文字即可直接修改。改完按「下載修改版」存成新的 index.html，回傳給我即可正式更新網站；本機瀏覽器也會暫存你的修改，重新整理不會消失。</div>
+    <div class="row">
+      <button class="edit-btn secondary" id="editResetBtn" style="display:none;">↺ 清除修改</button>
+      <button class="edit-btn secondary" id="editExportBtn" style="display:none;">⬇ 下載修改版</button>
+      <button class="edit-btn" id="editToggleBtn">✏️ 編輯行程內容</button>
+    </div>`;
+  document.body.appendChild(toolbar);
+
+  const toggleBtn=document.getElementById('editToggleBtn');
+  const exportBtn=document.getElementById('editExportBtn');
+  const resetBtn=document.getElementById('editResetBtn');
+  const hint=document.getElementById('editHint');
+  let editing=false;
+
+  function setEditing(on){
+    editing=on;
+    document.body.classList.toggle('edit-mode',on);
+    getEls().forEach(el=>{ el.setAttribute('contenteditable', on?'true':'false'); });
+    toggleBtn.textContent = on ? '✅ 完成編輯' : '✏️ 編輯行程內容';
+    exportBtn.style.display = on ? 'inline-block' : 'none';
+    resetBtn.style.display = on ? 'inline-block' : 'none';
+    hint.style.display = on ? 'block' : 'none';
+  }
+
+  toggleBtn.addEventListener('click',()=>setEditing(!editing));
+
+  document.addEventListener('input',(e)=>{
+    if(editing && e.target && e.target.dataset && e.target.dataset.eid){
+      saveEdit(e.target);
+    }
+  },true);
+
+  resetBtn.addEventListener('click',()=>{
+    if(confirm('確定要清除這台裝置上的所有修改，還原成原始行程內容嗎？')){
+      localStorage.removeItem(STORAGE_KEY);
+      location.reload();
+    }
+  });
+
+  exportBtn.addEventListener('click',()=>{
+    const wasEditing=editing;
+    setEditing(false);
+    toolbar.remove();
+    const html='<!DOCTYPE html>\n'+document.documentElement.outerHTML;
+    document.body.appendChild(toolbar);
+    if(wasEditing) setEditing(true);
+    const blob=new Blob([html],{type:'text/html'});
+    const url=URL.createObjectURL(blob);
+    const a=document.createElement('a');
+    a.href=url;a.download='index.html';
+    document.body.appendChild(a);a.click();document.body.removeChild(a);
+    URL.revokeObjectURL(url);
+  });
+})();
 </script>
 </body>
 </html>
