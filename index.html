@@ -195,6 +195,7 @@ footer{background:var(--ink);border-top:3px solid var(--red);padding:32px 5%;dis
 .edit-btn:hover{background:var(--red);}
 .edit-btn.secondary{background:var(--white);color:var(--ink);border:1px solid var(--rule);}
 .edit-btn.secondary:hover{background:var(--warm);color:var(--ink);}
+.edit-fab{width:46px;height:46px;padding:0;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:19px;}
 #editHint{max-width:230px;background:var(--white);border:1px solid var(--rule);border-radius:8px;padding:9px 13px;font-size:12.5px;color:var(--mid);line-height:1.6;box-shadow:var(--shadow);}
 body.edit-mode [contenteditable="true"]{outline:1px dashed var(--gold);outline-offset:3px;cursor:text;border-radius:3px;}
 body.edit-mode [contenteditable="true"]:hover{outline:1px dashed var(--red);}
@@ -691,7 +692,7 @@ days.forEach((d)=>{
     <div class="row">
       <button class="edit-btn secondary" id="editResetBtn" style="display:none;">↺ 清除修改</button>
       <button class="edit-btn secondary" id="editExportBtn" style="display:none;">⬇ 下載修改版</button>
-      <button class="edit-btn" id="editToggleBtn">✏️ 編輯行程內容</button>
+      <button class="edit-btn edit-fab" id="editToggleBtn" title="編輯行程內容">✏️</button>
     </div>`;
   document.body.appendChild(toolbar);
 
@@ -705,7 +706,8 @@ days.forEach((d)=>{
     editing=on;
     document.body.classList.toggle('edit-mode',on);
     getEls().forEach(el=>{ el.setAttribute('contenteditable', on?'true':'false'); });
-    toggleBtn.textContent = on ? '✅ 完成編輯' : '✏️ 編輯行程內容';
+    toggleBtn.textContent = on ? '✅' : '✏️';
+    toggleBtn.title = on ? '完成編輯' : '編輯行程內容';
     exportBtn.style.display = on ? 'inline-block' : 'none';
     resetBtn.style.display = on ? 'inline-block' : 'none';
     hint.style.display = on ? 'block' : 'none';
